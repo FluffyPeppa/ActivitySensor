@@ -76,7 +76,7 @@ public  class WalkingActivity extends FragmentActivity implements OnMapReadyCall
         c_img = (ImageView) findViewById(R.id.c_img);
 
 
-        m =  playRing();
+//        m =  playRing();
 
         Bitmap bitmap = Loadpic("Walking");
         c_img.setImageBitmap(bitmap);
@@ -146,28 +146,28 @@ public  class WalkingActivity extends FragmentActivity implements OnMapReadyCall
         mMap.setMyLocationEnabled(true);
     }
 
-    private MediaPlayer playRing() {
-        MediaPlayer player = null;
-        try {
-            player = new MediaPlayer();
-            assetManager = getAssets();
-            AssetFileDescriptor fileDescriptor = assetManager.openFd("gogogo.mp3");
-            player.setDataSource(fileDescriptor.getFileDescriptor(),fileDescriptor.getStartOffset(),
-                    fileDescriptor.getLength());
-            player.prepare();
-            player.start();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return player;
-    }
+//    private MediaPlayer playRing() {
+//        MediaPlayer player = null;
+//        try {
+//            player = new MediaPlayer();
+//            assetManager = getAssets();
+//            AssetFileDescriptor fileDescriptor = assetManager.openFd("gogogo.mp3");
+//            player.setDataSource(fileDescriptor.getFileDescriptor(),fileDescriptor.getStartOffset(),
+//                    fileDescriptor.getLength());
+//            player.prepare();
+//            player.start();
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return player;
+//    }
 
     @Override
     public void onStop() {
         Log.d("为什么", "onStop: ");
         super.onStop();
-        m.release();
+//        m.release();
     }
 
     public void addDB(){
